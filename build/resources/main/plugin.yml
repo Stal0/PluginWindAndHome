@@ -1,0 +1,9 @@
+name: Windhome
+version: '1.0-SNAPSHOT'
+main: com.windhome.Windhome
+api-version: '1.21'
+authors: [Stal0]
+commands:
+  givewindcharger:
+    description: Give a Wind Charger special
+    usage: /givewindcharger
