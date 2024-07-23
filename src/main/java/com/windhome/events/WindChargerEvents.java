@@ -21,24 +21,27 @@ public class WindChargerEvents implements Listener {
         this.plugin = plugin;
     }
 
+    /* A partir do momento em que o evento de EntityExplode é lançado,
+     a explosão padrão é substituída por uma explosão criada artificialmente,
+      alterando sua força de explosão e partículas, com base na config.yml */
 
     @EventHandler
     public void onExplosionWindCharger(EntityExplodeEvent event) {
         if (event.getEntity() instanceof WindCharge) {
             WindCharge windCharge = (WindCharge) event.getEntity();
-            Windhome.broadcastMessage("Explosão de WindCharge detectada");
-
             event.setCancelled(true);
-
+            WindChangeFactory.AlterParticle(windCharge, plugin);
             WindChangeFactory.AlterExplosionType(windCharge, plugin);
         }
     }
+
+    /* Quando o projétil de Wind Charge é lançado, ele tem sua velocidade modificada com base na configuração da config.yml */
+
     @EventHandler
     public void onLaunchWindCharger(ProjectileLaunchEvent event) {
         if (event.getEntity() instanceof WindCharge) {
             WindCharge windCharge = (WindCharge) event.getEntity();
-            windCharge.setAcceleration(windCharge.getDirection().multiply(3));
-            System.out.println("Acelerando.");
+            WindChangeFactory.AlterSpeedWindCharge(windCharge, plugin);
         }
     }
 

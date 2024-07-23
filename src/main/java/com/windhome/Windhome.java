@@ -14,7 +14,6 @@ public final class Windhome extends JavaPlugin   {
         // Plugin startup logic
 
         getServer().getPluginManager().registerEvents(new WindChargerEvents(this), this);
-
         saveDefaultConfig();
 
     }

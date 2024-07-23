@@ -1,5 +1,10 @@
 settings:
   explosionStrength: 5.0
   explosionRadius: 5.0
+  projectileSpeed: 2.0
+  particles:
+    ender: false
+    smoke: true
+    standard: false
 
 
