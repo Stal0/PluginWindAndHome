@@ -2,8 +2,10 @@ package com.windhome.entities;
 
 import com.windhome.Windhome;
 import org.bukkit.Location;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.Projectile;
 import org.bukkit.entity.WindCharge;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.plugin.Plugin;
@@ -28,13 +30,25 @@ public class WindChargerSpecial {
         windCharge.setMetadata(METADATA_KEY, new FixedMetadataValue(plugin, true));
 
         return windCharge;
-        }
+    }
+
+    public static WindCharge spawnWindWithBlock(Block block, Plugin plugin) {
+        Location location = block.getLocation();
+        Vector direction = block.getFace(block).getDirection();
+
+        WindCharge windCharge = block.getWorld().spawn(location, WindCharge.class);
+        windCharge.setVelocity(direction.multiply(1));
+        windCharge.setDirection(direction);
+        windCharge.setMetadata(METADATA_KEY, new FixedMetadataValue(plugin, true));
+
+        return windCharge;
+    }
 
     public static boolean isWindCharge(WindCharge windCharge) {
         return windCharge.hasMetadata(METADATA_KEY);
     }
 
-    }
+}
 
 
 

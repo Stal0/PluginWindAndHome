@@ -4,11 +4,12 @@ import com.windhome.commands.GiveWindCharger;
 import com.windhome.items.WindChargerCreate;
 import com.windhome.events.WindChargerEvents;
 import org.bukkit.Bukkit;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Windhome extends JavaPlugin   {
 
-    public Windhome windhome = this;
+
 
     @Override
     public void onEnable() {
