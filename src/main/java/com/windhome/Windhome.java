@@ -1,7 +1,5 @@
 package com.windhome;
 
-import com.windhome.commands.GiveWindCharger;
-import com.windhome.items.WindChargerCreate;
 import com.windhome.events.WindChargerEvents;
 import org.bukkit.Bukkit;
 
@@ -14,9 +12,10 @@ public final class Windhome extends JavaPlugin   {
     @Override
     public void onEnable() {
         // Plugin startup logic
-        WindChargerCreate.init();
+
         getServer().getPluginManager().registerEvents(new WindChargerEvents(this), this);
-        this.getCommand("givewindcharger").setExecutor(new GiveWindCharger());
+
+        saveDefaultConfig();
 
     }
 
