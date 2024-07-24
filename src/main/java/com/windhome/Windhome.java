@@ -1,5 +1,7 @@
 package com.windhome;
 
+import com.windhome.commands.SetHomeCommand;
+import com.windhome.commands.TeleportHomeCommand;
 import com.windhome.db.DatabaseManager;
 import com.windhome.events.LoginEvents;
 import com.windhome.events.WindChargerEvents;
@@ -19,6 +21,8 @@ public final class Windhome extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new WindChargerEvents(this), this);
         getServer().getPluginManager().registerEvents(new LoginEvents(), this);
         saveDefaultConfig();
+        this.getCommand("sethome").setExecutor(new SetHomeCommand());
+        this.getCommand("home").setExecutor(new TeleportHomeCommand(this));
 
         dbm = connectToDatabase();
         try {
@@ -36,7 +40,7 @@ public final class Windhome extends JavaPlugin {
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-       // dbm.disconnect();
+        dbm.disconnect();
 
     }
 
@@ -48,7 +52,7 @@ public final class Windhome extends JavaPlugin {
         String host = getConfig().getString("db.host");
         int port = getConfig().getInt("db.port");
         String database = getConfig().getString("db.database");
-        String user = getConfig().getString("db.user");
+        String user = getConfig().getString("db.username");
         String password = getConfig().getString("db.password");
 
         return new DatabaseManager(host, port, database, user, password);

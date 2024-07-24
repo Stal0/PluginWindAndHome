@@ -1,3 +1,5 @@
+#Configuration for Wind Charge
+
 settings:
   explosionStrength: 5.0
   explosionRadius: 5.0
@@ -6,14 +8,16 @@ settings:
     ender: false
     smoke: true
     standard: false
-##################################################################################################
-##################################################################################################
-######################################### MY SQL #################################################
-##################################################################################################
-##################################################################################################
+
+#Configuration for database MySQL
 db:
   host: 127.0.0.1
   port: 3306
   database: windhome
   username: root
   password:
+
+#Configuration for teleport (/sethome, /home)
+teleport:
+  cooldown: 60 #number in ticks
+  particle: true

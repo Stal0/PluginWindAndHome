@@ -4,6 +4,9 @@ main: com.windhome.Windhome
 api-version: '1.21'
 authors: [Stal0]
 commands:
-  givewindcharger:
-    description: Give a Wind Charger special
-    usage: /givewindcharger
+  sethome:
+    description: set a home
+    usage: /sethome
+  home:
+    description: teleporte to a home
+    usage: /home

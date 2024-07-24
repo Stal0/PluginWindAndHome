@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c3ae1fdd-b111-4f87-a9dd-cb532122a08a" name="Changes" comment="&quot;WindCharge modifications complete&quot;">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/com.windhome.Windhome.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/windhome/db/DatabaseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/windhome/events/LoginEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/WindHome.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/WindHome.Windhome.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/windhome/commands/SetHomeCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/windhome/commands/TeleportHomeCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/sha1-checksums.bin" afterDir="false" />
@@ -20,12 +22,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/windhome/Windhome.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/windhome/Windhome.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/windhome/Windhome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/windhome/Windhome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/windhome/db/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/windhome/db/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/windhome/events/LoginEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/windhome/events/LoginEvents.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,32 +128,32 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build Windhome.executor": "Run",
-    "Gradle.Windhome [buildDependents].executor": "Run",
-    "Gradle.Windhome [buildNeeded].executor": "Run",
-    "Gradle.Windhome [build].executor": "Run",
-    "Gradle.Windhome [clean].executor": "Run",
-    "Gradle.Windhome [init].executor": "Run",
-    "Gradle.Windhome [jar].executor": "Run",
-    "Gradle.Windhome [shadowJar].executor": "Run",
-    "Gradle.Windhome [testClasses].executor": "Run",
-    "Gradle.Windhome [wrapper].executor": "Run",
-    "Gradle.Windhome build.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Windhome",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build Windhome.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Windhome [buildDependents].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Windhome [buildNeeded].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Windhome [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Windhome [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Windhome [init].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Windhome [jar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Windhome [shadowJar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Windhome [testClasses].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Windhome [wrapper].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Windhome build.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Windhome&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.windhome.particles" />

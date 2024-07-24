@@ -19,23 +19,19 @@ public class LoginEvents implements Listener {
     public void onLogin(PlayerLoginEvent event) {
         Player player = event.getPlayer();
         System.out.println(".");
-
+        //recupera os players no banco de dados
         try(Connection conn = DatabaseManager.getConnection()) {
             PreparedStatement ps = conn.prepareStatement("SELECT * FROM players WHERE player_uuid = ?");
             ps.setString(1, player.getUniqueId().toString());
             ResultSet rs = ps.executeQuery();
-
-            if(rs.next()) {
-                Windhome.broadcastMessageToAll("Bem vindo de volta: " + player.getName());
-            } else {
+        //Caso o player não existir no banco de dados, insere o novo player no banco de dados ao entrar no servidor.
+            if(!(rs.next())) {
                 PreparedStatement insertPs = conn.prepareStatement("INSERT INTO players (player_uuid, player_name) VALUES (?, ?)");
                 insertPs.setString(1, player.getUniqueId().toString());
                 System.out.println(player.getUniqueId().toString());
                 insertPs.setString(2, player.getName());
                 System.out.println(player.getName());
                 insertPs.executeUpdate();
-                Windhome.broadcastMessageToAll("Bem-vindo ao servidor pela primeira vez!");
-
             }
         }
         catch (SQLException e) {
